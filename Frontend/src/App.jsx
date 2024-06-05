@@ -8,12 +8,11 @@ function App() {
 
   return (
     <>
-     <UsuarioProvider>
-      <HotelProvider>
-        <RutasApp/>
-        </HotelProvider>
+      <UsuarioProvider>
+        <HotelProvider>
+          <RutasApp/>
+          </HotelProvider>
       </UsuarioProvider>
-      
     </>
   )
 }

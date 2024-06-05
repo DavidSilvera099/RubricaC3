@@ -6,11 +6,9 @@ import { UsuarioContext } from '../contexto/Usuario/UsuarioContext';
 export const MisReservas = () => {
     const { bookings, cargarBookings } = useContext(HotelContext);
     const { usuario } = useContext(UsuarioContext);
-    const [loading, setLoading] = useState(0);
     useEffect(() => {
         if (usuario && usuario.idusuario) {
             cargarBookings(usuario.idusuario);
-            setLoading(loading + loading + 1)
         }
     }, [usuario, usuario.idusuario]);
     return (

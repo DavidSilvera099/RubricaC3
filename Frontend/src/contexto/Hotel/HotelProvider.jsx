@@ -99,7 +99,7 @@ export const HotelProvider = ({children}) => {
     const editarBooking = async(values)=>{
       try {
         await axios.put(`${URLBACKEND}/bookings/${values.idbookings}`, values, {withCredentials:true})
-       cargarBookings(usuario.idusuario)
+        cargarBookings(usuario.idusuario)
     } catch ({response}) {
         console.log(response.data.message)
     }
