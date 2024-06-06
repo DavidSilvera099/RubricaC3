@@ -8,10 +8,10 @@ export const CardRoomAdmin = ({codigo_habitacion, tipo, valor, numero}) => {
   return (
     <div>
     <div>
-        <p>Id: {codigo_habitacion}</p>
+        <p>Numero: {numero}</p>
         <p>Tipo: {tipo}</p>
         <p>Valor: {valor}</p>
-        <p>Numero: {numero}</p>
+        <p>Id: {codigo_habitacion}</p>
         <img onClick={()=>setopenEdit(true)} width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/edit--v1.png" alt="edit--v1" />
         <img onClick={()=>eliminarRoom(codigo_habitacion)} width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/filled-trash.png" alt="filled-trash"/>
     </div>

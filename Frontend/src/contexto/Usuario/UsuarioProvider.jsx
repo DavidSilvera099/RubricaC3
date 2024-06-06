@@ -31,7 +31,6 @@ export const UsuarioProvider = ({children}) => {
     const registrar = async(values)=>{
       try {
         const {data} = await axios.post(`${URLBACKEND}/usuarios/registrar`,values, {withCredentials:true})
-        console.log(data)
         setusuario(data)
         Alert.fire({
           title: 'Success',

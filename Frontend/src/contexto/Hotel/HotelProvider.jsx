@@ -91,7 +91,6 @@ export const HotelProvider = ({children}) => {
       try {
           const {data} = await axios.get(`${URLBACKEND}/bookings/${id}`,{withCredentials:true})
           setbookings(data)
-          console.log(data)
       } catch ({response}) {
           console.log(response.data.message)
       }
