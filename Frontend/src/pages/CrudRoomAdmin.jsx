@@ -8,8 +8,10 @@ export const CrudRoomAdmin = () => {
    const {rooms} = useContext(HotelContext)
     const [formAddRoom, setformAddRoom] = useState(false)
   return (
-    <div>
-        <button onClick={()=>setformAddRoom(true)}>Crear Room</button>
+    <>
+    <button className='bnt-principal btn-crear-room' onClick={()=>setformAddRoom(true)}>Crear Room</button>
+    <div className='card-container'>
+        
         {
         !formAddRoom?(
             rooms.length?(
@@ -22,5 +24,6 @@ export const CrudRoomAdmin = () => {
         )
         }
     </div>
+    </>
   )
 }

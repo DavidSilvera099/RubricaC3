@@ -12,7 +12,7 @@ export const MisReservas = () => {
         }
     }, [usuario, usuario.idusuario]);
     return (
-        <div>
+        <div className='card-container'>
             {bookings.length ? (
                 bookings.map((booking) => (
                     <CardBooking
