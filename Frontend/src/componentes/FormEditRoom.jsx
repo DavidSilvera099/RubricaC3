@@ -28,15 +28,15 @@ export const FormEditRoom = ({codigo_habitacion ='', tipo='', numero ='', valor=
         <img onClick={isEdit?()=>setopenEdit(false):()=>setformAddRoom(false)} src="https://img.icons8.com/ios-filled/50/x.png"/>
         <h1>{isEdit?'Editar room':'Crear Room'}</h1>
         <div>
-            <label htmlFor="">numero</label>
+            <label >numero</label>
             <input type="text" {...register('numero', {required:true})} />
         </div>
         <div>
-            <label htmlFor="">tipo</label>
+            <label >tipo</label>
             <input type="text" {...register('tipo', {required:true})} />
         </div>
         <div>
-            <label htmlFor="">valor</label>
+            <label >valor</label>
             <input type="number" {...register('valor', {required:true})} />
         </div>
         <button>{isEdit?'Editar':'Crear'}</button>

@@ -7,7 +7,7 @@ export const CardRoom = ({codigo_habitacion, numero, tipo, valor}) => {
   const {register, handleSubmit} = useForm()
   const { reservarRoom } =useContext(HotelContext)
   const { usuario } = useContext(UsuarioContext)
-  const admin = usuario? usuario.admin : false;
+  const admin = usuario ? usuario.admin : false;
   const navigate = useNavigate()
   return (
     <div >
@@ -20,11 +20,11 @@ export const CardRoom = ({codigo_habitacion, numero, tipo, valor}) => {
           reservarRoom({codigo_habitacion: codigo_habitacion, idcliente:usuario.idusuario, telefono_cliente:usuario.telefono, nombre_cliente:usuario.nombre+' '+usuario.apellido, fecha_reservacion, ...values})
         })}>
           <div>
-            <label htmlFor="">Fecha_Entrada:</label>
+            <label >Fecha_Entrada:</label>
             <input type="datetime-local" {...register('fecha_entrada', { required:true })} />
           </div>
           <div>
-            <label htmlFor="">Fecha_Salida:</label>
+            <label >Fecha_Salida:</label>
             <input type="datetime-local" {...register('fecha_salida', { required:true })} />
           </div>
           {
